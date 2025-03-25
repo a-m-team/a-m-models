@@ -22,8 +22,8 @@ Original question prompt
 The assistant’s previous answer is: <answer> last round answer </answer>, and please re-answer.
 ```
 
-<img src="assets/Think-Twice-QwQ.png" alt="alt text" width="400px">
-<img src="assets/Think-Twice-DeepSeek-R1.png" alt="alt text" width="400px">
+<img src="assets/Think-Twice-QwQ.png" alt="alt text" width="800px">
+<img src="assets/Think-Twice-DeepSeek-R1.png" alt="alt text" width="800px">
 
 ### Model Performance Comparison (pass@1 accuracy) Between Single-round (Round 1) and Multi-round Thinking (Round 2-4) Across Different Benchmarks
 
@@ -47,7 +47,7 @@ The assistant’s previous answer is: <answer> last round answer </answer>, and 
 
 The AM-DeepSeek-R1-Distilled is a large-scale dataset with thinking traces for general reasoning tasks, composed of high-quality and challenging reasoning problems. These problems are collected from a multitude of open-source datasets, subjected to semantic deduplication and meticulous cleaning to eliminate test set contamination. All responses within the dataset are distilled from reasoning models (pre-dominantly DeepSeek-R1) and have undergone rigorous verification procedures. Mathematical problems are validated by checking against reference answers, code problems are verified using test cases, and other tasks are evaluated with the aid of a reward model. The AM-Distill-Qwen-32B model, which was trained through only simple Supervised Fine-Tuning (SFT) using this batch of data, outperformed the DeepSeek-R1-Distill-Qwen-32B model on four benchmarks: AIME2024, MATH-500, GPQA-Diamond, and LiveCodeBench. We are releasing these 1.4 million problems and their corresponding responses to the research community with the objective of fostering the development of powerful reasoning-oriented Large Language Models (LLMs). The dataset was published in <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M>.
 
-<img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="400px">
+<img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="800px">
 
 ## Citation
 

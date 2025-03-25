@@ -22,8 +22,8 @@ Original question prompt
 The assistant’s previous answer is: <answer> last round answer </answer>, and please re-answer.
 ```
 
-<img src="assets/Think-Twice-QwQ.png" alt="alt text" width="400px">
-<img src="assets/Think-Twice-DeepSeek-R1.png" alt="alt text" width="400px">
+<img src="assets/Think-Twice-QwQ.png" alt="alt text" width="800px">
+<img src="assets/Think-Twice-DeepSeek-R1.png" alt="alt text" width="800px">
 
 
 ### 不同基准测试中单轮思考（第1轮）与多轮思考（第2-4轮）的模型表现对比（pass@1）
@@ -48,7 +48,7 @@ The assistant’s previous answer is: <answer> last round answer </answer>, and 
 
 AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理任务数据集，包含大量高质量且具备挑战性的推理问题。这些问题收集自多个开源数据集，经过语义去重和精细清理，以消除可能的测试集污染风险。数据集中所有的答案均由推理模型（主要为 DeepSeek-R1）蒸馏而成，并经过严格的验证流程：数学问题通过与标准答案对比进行验证，代码问题通过测试用例进行核验，而其他类型任务则通过奖励模型进行评估。基于该数据集仅使用简单监督微调（SFT）训练的 AM-Distill-Qwen-32B 模型，在 AIME2024、MATH-500、GPQA-Diamond 以及 LiveCodeBench 四项基准测试上，均超越了DeepSeek-R1-Distill-Qwen-32B 模型。为了推动更强大的推理导向大语言模型（LLMs）发展，我们开源了这140万条问题及其对应的答案。该数据集已公开在 <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M。>
 
-<img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="400px">
+<img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="800px">
 
 ## Citation
 
