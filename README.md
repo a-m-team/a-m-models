@@ -6,9 +6,9 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
-* [2024-03-25] 更新技术报告[1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf)，开源140万条蒸馏推理数据，复现DeepSeek-R1蒸馏模型效果
+* [2025-03-25] 更新技术报告[1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf)，开源140万条蒸馏推理数据，复现DeepSeek-R1蒸馏模型效果
 
-* [2024-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
+* [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
 
