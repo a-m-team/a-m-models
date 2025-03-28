@@ -57,18 +57,24 @@ AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理�
 如果您觉得我们的工作对您的研究有所帮助，欢迎给我们点个星 :star:, 并引用我们的工作:pencil:
 
 ```BibTeX
-@misc{Think_Twice,
+@misc{tian2025thinktwiceenhancingllm,
       title={Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yunjie Ji and Yiping Peng and Han Zhao and Xiangang Li},
-      url = {https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf},
-      year={2025}
+      year={2025},
+      eprint={2503.19855},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.19855}, 
 }
 
-@misc{AM-DeepSeek-R1-Distilled-1.4M,
-      title={AM DeepSeek R1 Distilled 1.4M}, 
+@misc{zhao202514millionopensourcedistilled,
+      title={1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Training}, 
       author={Han Zhao and Haotian Wang and Yiping Peng and Sitong Zhao and Xiaoyu Tian and Shuaiting Chen and Yunjie Ji and Xiangang Li},
-      url = {https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf},
-      year={2025}
+      year={2025},
+      eprint={2503.19633},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.19633}, 
 }
 
 
