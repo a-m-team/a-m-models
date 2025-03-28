@@ -6,9 +6,9 @@ a-m-models is an open-source initiative led by the a-m-team, dedicated to in-dep
 
 ## 🔄 Recent Updates
 
-* [2024-03-25] Updated technical report [1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Training](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf), open-sourced 1.4 million distilled reasoning data entries, reproducing the performance of DeepSeek-R1 distilled models.
+* [2025-03-25] Updated technical report [1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Training](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf), open-sourced 1.4 million distilled reasoning data entries, reproducing the performance of DeepSeek-R1 distilled models.
 
-* [2024-03-25] Updated the technical report [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf), introducing a simple yet effective test-time scaling approach—Multi-round Thinking—which further advances the state-of-the-art model performance
+* [2025-03-25] Updated the technical report [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf), introducing a simple yet effective test-time scaling approach—Multi-round Thinking—which further advances the state-of-the-art model performance
 
 ## 📑 Research Reports
 
@@ -54,19 +54,24 @@ The AM-DeepSeek-R1-Distilled is a large-scale dataset with thinking traces for g
 If you find our work helpful to your research, please star our repository :star: and cite our work :pencil:
 
 ```BibTeX
-@misc{Think_Twice,
+@misc{tian2025thinktwiceenhancingllm,
       title={Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yunjie Ji and Yiping Peng and Han Zhao and Xiangang Li},
-      url = {https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf},
-      year={2025}
+      year={2025},
+      eprint={2503.19855},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.19855}, 
 }
 
-@misc{AM-DeepSeek-R1-Distilled-1.4M,
-      title={AM DeepSeek R1 Distilled 1.4M}, 
+@misc{zhao202514millionopensourcedistilled,
+      title={1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Training}, 
       author={Han Zhao and Haotian Wang and Yiping Peng and Sitong Zhao and Xiaoyu Tian and Shuaiting Chen and Yunjie Ji and Xiangang Li},
-      url = {https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf},
-      year={2025}
+      year={2025},
+      eprint={2503.19633},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.19633}, 
 }
-
 
 ```
