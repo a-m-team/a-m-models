@@ -6,6 +6,8 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
+* [2025-04-01] 更新技术报告 [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)，介绍了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力
+
 * [2025-03-25] 更新技术报告[1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf)，开源140万条蒸馏推理数据，复现DeepSeek-R1蒸馏模型效果
 
 * [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
@@ -51,6 +53,28 @@ The assistant’s previous answer is: <answer> last round answer </answer>, and 
 AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理任务数据集，包含大量高质量且具备挑战性的推理问题。这些问题收集自多个开源数据集，经过语义去重和精细清理，以消除可能的测试集污染风险。数据集中所有的答案均由推理模型（主要为 DeepSeek-R1）蒸馏而成，并经过严格的验证流程：数学问题通过与标准答案对比进行验证，代码问题通过测试用例进行核验，而其他类型任务则通过奖励模型进行评估。基于该数据集仅使用简单监督微调（SFT）训练的 AM-Distill-Qwen-32B 模型，在 AIME2024、MATH-500、GPQA-Diamond 以及 LiveCodeBench 四项基准测试上，均超越了DeepSeek-R1-Distill-Qwen-32B 模型。为了推动更强大的推理导向大语言模型（LLMs）发展，我们开源了这140万条问题及其对应的答案。该数据集已公开在 <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M。>
 
 <img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="600px">
+
+### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
+
+提高大语言模型（LLMs）推理能力的效率和规模是人工智能研究中的一个关键挑战。本文研究了难度感知分阶段强化学习（RL）策略如何提升LLM性能。我们表明，基于难度等级选择训练数据有助于强化学习优化。此外，我们提出了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力。我们的结果还强调了在数学推理和代码生成任务上训练模型的显著好处。
+
+#### 1. 数据难度选择
+
+根据适当的难度指标精心选择RL训练数据至关重要。适中的难度水平能够提高学习效率，平衡充分挑战与避免用过于困难的情境压倒学习过程之间的需求。
+
+<img src="assets/staged-RL-data-difficulty.png" alt="alt text" width="600px">
+
+#### 2. 分阶段训练
+
+通过选择适当具有挑战性的数据并结合分阶段训练，我们可以显著提高LLM在推理任务上的表现。（由于缺乏与代码相关的训练数据，模型在LiveCodeBench上的表现与基础模型基本相同。）
+
+<img src="assets/staged-RL-2stage.png" alt="alt text" width="600px">
+
+#### 3. 数学和代码的同时训练
+
+在训练过程中混合数学推理和代码生成任务可以带来跨领域的提升，强有力地证明了多领域训练的好处。
+
+<img src="assets/staged-RL-math-code.png" alt="alt text" width="600px">
 
 ## Citation
 
