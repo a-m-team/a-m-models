@@ -14,7 +14,8 @@ a-m-models is an open-source initiative led by the a-m-team, dedicated to in-dep
 
 ## 📑 Research Reports
 
-### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
+### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)[![Generic badge](https://img.shields.io/badge/🤗-AM_Math_Difficulty_RL-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Math-Difficulty-RL)
+
 
 Improving the reasoning abilities of Large Language Models (LLMs) efficiently and at scale is a key challenge in AI research. This paper investigates how difficulty-aware staged reinforcement learning (RL) strategies can boost LLM performance. We show that selecting training data based on difficulty levels enhances RL optimization. Additionally, we propose a staged training approach that gradually exposes models to more challenging tasks, improving their reasoning capabilities. Besides, our results highlight significant benefits when training models on both mathematical reasoning and code generation tasks.
 

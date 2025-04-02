@@ -14,7 +14,7 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 📑 研究报告
 
-### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
+### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)[![Generic badge](https://img.shields.io/badge/🤗-AM_Math_Difficulty_RL-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Math-Difficulty-RL)
 
 提高大语言模型（LLMs）推理能力的效率和规模是人工智能研究中的一个关键挑战。本文研究了难度感知分阶段强化学习（RL）策略如何提升LLM性能。我们表明，基于难度等级选择训练数据有助于强化学习优化。此外，我们提出了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力。我们的结果还强调了在数学推理和代码生成任务上训练模型的显著好处。
 
