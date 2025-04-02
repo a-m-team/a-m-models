@@ -14,6 +14,28 @@ a-m-models is an open-source initiative led by the a-m-team, dedicated to in-dep
 
 ## 📑 Research Reports
 
+### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
+
+Improving the reasoning abilities of Large Language Models (LLMs) efficiently and at scale is a key challenge in AI research. This paper investigates how difficulty-aware staged reinforcement learning (RL) strategies can boost LLM performance. We show that selecting training data based on difficulty levels enhances RL optimization. Additionally, we propose a staged training approach that gradually exposes models to more challenging tasks, improving their reasoning capabilities. Besides, our results highlight significant benefits when training models on both mathematical reasoning and code generation tasks.
+
+#### 1. Data Difficulty Selection
+
+Carefully selecting RL training data based on appropriate difficulty metrics is critical. A moderate difficulty level enhances learning efficiency, balancing the need for adequate challenge against the risk of overwhelming the learning process with overly difficult scenarios.
+
+<img src="assets/staged-RL-data-difficulty.png" alt="alt text" width="600px">
+
+#### 2. Staged Training
+
+By selecting appropriately challenging data and incorporating staged training, we can significantly improve the performance of LLMs on reasoning tasks. (Due to the absence of code-related training data, its performance on LiveCodeBench is essentially the same as that of the base model.)
+
+<img src="assets/staged-RL-2stage.png" alt="alt text" width="600px">
+
+#### 3. Simultaneous Training on Mathematics and Code
+
+Mixing mathematical reasoning and code generation tasks during training results in cross-domain improvements, providing strong evidence for the benefits of multi-domain training.
+
+<img src="assets/staged-RL-math-code.png" alt="alt text" width="600px">
+
 ### [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)
 
 Recent advances in large language models (LLMs), such as OpenAI-o1 and DeepSeek-R1, have demonstrated the effectiveness of test-time scaling, where extended reasoning processes substantially enhance model performance. Despite this, current models are constrained by limitations in handling long texts and reinforcement learning (RL) training efficiency. To address these issues, we propose a simple yet effective test-time scaling approach—\textbf{Multi-round Thinking}. This method iteratively refines model reasoning by leveraging previous answers as prompts for subsequent rounds. Extensive experiments across multiple models, including QwQ-32B and DeepSeek-R1, consistently show performance improvements on various benchmarks such as AIME 2024, MATH-500, GPQA-diamond, and LiveCodeBench. For instance, the accuracy of QwQ-32B improved from 80.3\% (Round 1) to 82.1\% (Round 2) on the AIME 2024 dataset, while DeepSeek-R1 showed a similar increase from 79.7\% to 82.0\%. These results confirm that \textbf{Multi-round Thinking} is a broadly applicable, straightforward approach to achieving stable enhancements in model performance, underscoring its potential for future developments in test-time scaling techniques.
@@ -52,33 +74,21 @@ The AM-DeepSeek-R1-Distilled is a large-scale dataset with thinking traces for g
 <img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="600px">
 
 
-### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
-
-Improving the reasoning abilities of Large Language Models (LLMs) efficiently and at scale is a key challenge in AI research. This paper investigates how difficulty-aware staged reinforcement learning (RL) strategies can boost LLM performance. We show that selecting training data based on difficulty levels enhances RL optimization. Additionally, we propose a staged training approach that gradually exposes models to more challenging tasks, improving their reasoning capabilities. Besides, our results highlight significant benefits when training models on both mathematical reasoning and code generation tasks.
-
-#### 1. Data Difficulty Selection
-
-Carefully selecting RL training data based on appropriate difficulty metrics is critical. A moderate difficulty level enhances learning efficiency, balancing the need for adequate challenge against the risk of overwhelming the learning process with overly difficult scenarios.
-
-<img src="assets/staged-RL-data-difficulty.png" alt="alt text" width="600px">
-
-#### 2. Staged Training
-
-By selecting appropriately challenging data and incorporating staged training, we can significantly improve the performance of LLMs on reasoning tasks. (Due to the absence of code-related training data, its performance on LiveCodeBench is essentially the same as that of the base model.)
-
-<img src="assets/staged-RL-2stage.png" alt="alt text" width="600px">
-
-#### 3. Simultaneous Training on Mathematics and Code
-
-Mixing mathematical reasoning and code generation tasks during training results in cross-domain improvements, providing strong evidence for the benefits of multi-domain training.
-
-<img src="assets/staged-RL-math-code.png" alt="alt text" width="600px">
-
 ## Citation
 
 If you find our work helpful to your research, please star our repository :star: and cite our work :pencil:
 
 ```BibTeX
+@misc{ji2025difficultyawarestagedreinforcementlearning,
+      title={How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study}, 
+      author={Yunjie Ji and Sitong Zhao and Xiaoyu Tian and Haotian Wang and Shuaiting Chen and Yiping Peng and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2504.00829},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.00829}, 
+}
+
 @misc{tian2025thinktwiceenhancingllm,
       title={Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yunjie Ji and Yiping Peng and Han Zhao and Xiangang Li},

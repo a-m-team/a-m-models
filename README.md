@@ -14,6 +14,28 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 📑 研究报告
 
+### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
+
+提高大语言模型（LLMs）推理能力的效率和规模是人工智能研究中的一个关键挑战。本文研究了难度感知分阶段强化学习（RL）策略如何提升LLM性能。我们表明，基于难度等级选择训练数据有助于强化学习优化。此外，我们提出了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力。我们的结果还强调了在数学推理和代码生成任务上训练模型的显著好处。
+
+#### 1. 数据难度选择
+
+根据适当的难度指标精心选择RL训练数据至关重要。适中的难度水平能够提高学习效率，平衡充分挑战与避免用过于困难的情境压倒学习过程之间的需求。
+
+<img src="assets/staged-RL-data-difficulty.png" alt="alt text" width="600px">
+
+#### 2. 分阶段训练
+
+通过选择适当具有挑战性的数据并结合分阶段训练，我们可以显著提高LLM在推理任务上的表现。（由于没加入与代码相关的训练数据，模型在LiveCodeBench上的表现与基础模型基本相同。）
+
+<img src="assets/staged-RL-2stage.png" alt="alt text" width="600px">
+
+#### 3. 数学和代码的同时训练
+
+在训练过程中混合数学推理和代码生成任务可以带来跨领域的提升，强有力地证明了多领域训练的好处。
+
+<img src="assets/staged-RL-math-code.png" alt="alt text" width="600px">
+
 ### [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)
 
 近年来，以OpenAI-o1和DeepSeek-R1为代表的大语言模型（LLMs）取得了显著进展，这些进展表明，通过测试阶段扩展推理流程（test-time scaling），可显著提升模型表现。然而，目前的模型仍受到处理长文本能力和强化学习（RL）训练效率的限制。为解决这些问题，我们提出了一种简单且有效的测试阶段扩展方法——多轮思考（Multi-round Thinking）。该方法通过将模型先前的回答作为下一轮推理的提示（prompts），迭代地精进模型的推理过程。在包括QwQ-32B和DeepSeek-R1在内的多个模型上的大量实验表明，多轮思考能够在AIME 2024、MATH-500、GPQA-diamond和LiveCodeBench等多个基准测试中稳定提升模型表现。例如，在AIME 2024数据集中，QwQ-32B的准确率从第一轮的80.3%提高到第二轮的82.1%，DeepSeek-R1也表现出了类似的提升，从79.7%提高到82.0%。这些结果证明，多轮思考是一种适用广泛、实施简单且有效提升模型表现的方法，彰显出该方法在未来测试阶段扩展技术发展中的巨大潜力。
@@ -54,33 +76,21 @@ AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理�
 
 <img src="assets/AM-DeepSeek-R1-Distilled.jpeg" alt="alt text" width="600px">
 
-### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)
-
-提高大语言模型（LLMs）推理能力的效率和规模是人工智能研究中的一个关键挑战。本文研究了难度感知分阶段强化学习（RL）策略如何提升LLM性能。我们表明，基于难度等级选择训练数据有助于强化学习优化。此外，我们提出了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力。我们的结果还强调了在数学推理和代码生成任务上训练模型的显著好处。
-
-#### 1. 数据难度选择
-
-根据适当的难度指标精心选择RL训练数据至关重要。适中的难度水平能够提高学习效率，平衡充分挑战与避免用过于困难的情境压倒学习过程之间的需求。
-
-<img src="assets/staged-RL-data-difficulty.png" alt="alt text" width="600px">
-
-#### 2. 分阶段训练
-
-通过选择适当具有挑战性的数据并结合分阶段训练，我们可以显著提高LLM在推理任务上的表现。（由于缺乏与代码相关的训练数据，模型在LiveCodeBench上的表现与基础模型基本相同。）
-
-<img src="assets/staged-RL-2stage.png" alt="alt text" width="600px">
-
-#### 3. 数学和代码的同时训练
-
-在训练过程中混合数学推理和代码生成任务可以带来跨领域的提升，强有力地证明了多领域训练的好处。
-
-<img src="assets/staged-RL-math-code.png" alt="alt text" width="600px">
-
 ## Citation
 
 如果您觉得我们的工作对您的研究有所帮助，欢迎给我们点个星 :star:, 并引用我们的工作:pencil:
 
 ```BibTeX
+@misc{ji2025difficultyawarestagedreinforcementlearning,
+      title={How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study}, 
+      author={Yunjie Ji and Sitong Zhao and Xiaoyu Tian and Haotian Wang and Shuaiting Chen and Yiping Peng and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2504.00829},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.00829}, 
+}
+
 @misc{tian2025thinktwiceenhancingllm,
       title={Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yunjie Ji and Yiping Peng and Han Zhao and Xiangang Li},
