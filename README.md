@@ -6,6 +6,11 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
+* [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://github.com/a-m-team/a-m-models/blob/main/docs/DeepDistill.pdf)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
+
+* [2025-04-13] 更新技术报告[Leveraging Reasoning Model Answers to Enhance Non-Reasoning
+Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning model提升non-reasoning model表现的方法。
+
 * [2025-04-01] 更新技术报告 [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)，介绍了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力
 
 * [2025-03-25] 更新技术报告[1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf)，开源140万条蒸馏推理数据，复现DeepSeek-R1蒸馏模型效果
@@ -13,6 +18,28 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 * [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
+### [DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://github.com/a-m-team/a-m-models/blob/main/docs/DeepDistill.pdf)[![Generic badge](https://img.shields.io/badge/🤗-AM_DeepSeek_Distilled_40M-green.svg)](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M)
+
+尽管近期大语言模型（LLMs）在复杂推理任务中取得了显著的进展，但对基础模型的训练过程和数据质量的深入理解仍然不足。为解决此问题，我们构建了一个包含约**334万**个不重复问题和**4000万**条由不同能力模型多次蒸馏答案的大规模推理数据集。通过引入通过率（Pass Rate）和变异系数（Coefficient of Variation），我们精准选择具有最高学习潜力的训练数据，以提升推理能力。该数据集已公开在 <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M>。
+
+在AIME2024上，我们的72B模型**仅通过SFT**达到了79.2分；32B模型达到75.8分，进一步退火训练达到77.9分，接近开源最优水平。
+
+<img src="assets/DeepDistill.png" alt="alt text" width="600px">
+
+
+### [Leveraging Reasoning Model Answers to Enhance Non-Reasoning Model Capability](https://arxiv.org/pdf/2504.09639)
+
+近期大型语言模型（LLMs）的进展，例如 DeepSeek-R1 和 OpenAI-o1，已展示了test time scaling的显著有效性，在各种基准测试中取得了实质性的性能提升。这些先进模型利用审慎的"思考"步骤系统地提高答案质量。在本文中，我们提出利用这些由reasoning model生成的高质量输出，来改进计算需求较低、非推理的模型。我们探索并比较了利用推理模型产生的答案来训练和改进非推理模型的方法。通过在既定基准上进行监督微调（SFT）实验，我们在各种基准上取得了持续的改进，强调了这种方法在提升non-reasoning model直接回答问题的能力方面的潜力。
+
+1. **方法**: 对比了三种利用reasoning-model内容的方法:
+   - **方法1**: 使用原生的non-reasoning model产生的回答；
+   - **方法2**: 使用reasoning model的'answer'部分；
+   - **方法3**: think summarization: 总结reasoning model 的think 部分 和 answer部分拼在一起。
+
+2. **结论**: 正确使用reasoning model的回复内容可以增强non-reasoning model的能力，具体效果如图所示。然而，若方法不当，可能导致模型的某些指标下降。因此，在使用过程中需要根据不同场景采用特定策略来提升non-reasoning model的能力。
+
+<img src="assets/Leveraging-Reasoning-Model-Answers-to-Enhance-Non-Reasoning-Model-Capability.png" alt="alt text" width="600px">
+
 
 ### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)[![Generic badge](https://img.shields.io/badge/🤗-AM_Math_Difficulty_RL-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Math-Difficulty-RL)
 
