@@ -6,7 +6,7 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
-* [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://github.com/a-m-team/a-m-models/blob/main/docs/DeepDistill.pdf)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
+* [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
 
 * [2025-04-13] 更新技术报告[Leveraging Reasoning Model Answers to Enhance Non-Reasoning
 Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning model提升non-reasoning model表现的方法。
@@ -18,7 +18,7 @@ Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning mo
 * [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
-### [DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://github.com/a-m-team/a-m-models/blob/main/docs/DeepDistill.pdf)[![Generic badge](https://img.shields.io/badge/🤗-AM_DeepSeek_Distilled_40M-green.svg)](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M)
+### [DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)[![Generic badge](https://img.shields.io/badge/🤗-AM_DeepSeek_Distilled_40M-green.svg)](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M)
 
 尽管近期大语言模型（LLMs）在复杂推理任务中取得了显著的进展，但对基础模型的训练过程和数据质量的深入理解仍然不足。为解决此问题，我们构建了一个包含约**334万**个不重复问题和**4000万**条由不同能力模型多次蒸馏答案的大规模推理数据集。通过引入通过率（Pass Rate）和变异系数（Coefficient of Variation），我们精准选择具有最高学习潜力的训练数据，以提升推理能力。该数据集已公开在 <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M>。
 
@@ -108,6 +108,26 @@ AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理�
 如果您觉得我们的工作对您的研究有所帮助，欢迎给我们点个星 :star:, 并引用我们的工作:pencil:
 
 ```BibTeX
+@misc{tian2025deepdistillenhancingllmreasoning,
+      title={DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training}, 
+      author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Yunjie Ji and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2504.17565},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.17565}, 
+}
+
+@misc{wang2025leveragingreasoningmodelanswers,
+      title={Leveraging Reasoning Model Answers to Enhance Non-Reasoning Model Capability}, 
+      author={Haotian Wang and Han Zhao and Shuaiting Chen and Xiaoyu Tian and Sitong Zhao and Yunjie Ji and Yiping Peng and Xiangang Li},
+      year={2025},
+      eprint={2504.09639},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.09639}, 
+}
+
 @misc{ji2025difficultyawarestagedreinforcementlearning,
       title={How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study}, 
       author={Yunjie Ji and Sitong Zhao and Xiaoyu Tian and Haotian Wang and Shuaiting Chen and Yiping Peng and Han Zhao and Xiangang Li},
