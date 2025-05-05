@@ -6,6 +6,9 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
+* [2025-05-05] 发布技术报告[Exploring the Potential of Offline RL for Reasoning in
+LLMs: A Preliminary Study](https://github.com/a-m-team/a-m-models/blob/main/docs/Exploring-the-Potential-of-Offline-RL-for-Reasoning-in-LLMs-A-Preliminary-Study.pdf)，探索了Offline-RL增强模型推理能力的方法，实验结果表明在各项评估指标有一致提升。
+
 * [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
 
 * [2025-04-13] 更新技术报告[Leveraging Reasoning Model Answers to Enhance Non-Reasoning
@@ -18,6 +21,18 @@ Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning mo
 * [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
+
+### [Exploring the Potential of Offline RL for Reasoning inLLMs: A Preliminary Study](https://github.com/a-m-team/a-m-models/blob/main/docs/Exploring-the-Potential-of-Offline-RL-for-Reasoning-in-LLMs-A-Preliminary-Study.pdf)
+
+随着大语言模型（LLMs）在长上下文推理任务中的表现持续提升，当前的主流方法主要依赖在线强化学习（Online RL），然而这些方法通常伴随较高的计算成本和复杂性。相较而言，离线强化学习（Offline RL）方法因其简洁高效而展现出潜在的优势，但在长上下文推理领域却未获得充分探索。
+
+针对这一研究空白，本论文探讨了Offline RL方法，尤其是直接偏好优化（Direct Preference Optimization, DPO）及其对输出长度不敏感的变体LD-DPO，在提升LLMs推理能力上的有效性。我们通过广泛的实验，在多个推理基准上验证了这些更为简洁的Offline RL方法能够显著提高模型性能，平均提升达到**3.3%**，其中arena-hard基准测试中提升达到**10.1%**。
+
+此外，本研究分析了DPO方法对于输出长度的敏感性，强调在延长推理文本长度时需要关注内容的语义丰富性，而非盲目增加长度，否则可能会对模型性能产生负面影响。
+
+<img src="assets/Exploring-the-Potential-of-Offline-RL-for-Reasoning-in-LLMs-A-Preliminary-Study.png" alt="alt text" width="600px">
+
+
 ### [DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)[![Generic badge](https://img.shields.io/badge/🤗-AM_DeepSeek_Distilled_40M-green.svg)](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M)
 
 尽管近期大语言模型（LLMs）在复杂推理任务中取得了显著的进展，但对基础模型的训练过程和数据质量的深入理解仍然不足。为解决此问题，我们构建了一个包含约**334万**个不重复问题和**4000万**条由不同能力模型多次蒸馏答案的大规模推理数据集。通过引入通过率（Pass Rate）和变异系数（Coefficient of Variation），我们精准选择具有最高学习潜力的训练数据，以提升推理能力。该数据集已公开在 <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-Distilled-40M>。
