@@ -119,6 +119,16 @@ The AM-DeepSeek-R1-Distilled is a large-scale dataset with thinking traces for g
 If you find our work helpful to your research, please star our repository :star: and cite our work :pencil:
 
 ```BibTeX
+@misc{tian2025exploringpotentialofflinerl,
+      title={Exploring the Potential of Offline RL for Reasoning in LLMs: A Preliminary Study}, 
+      author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Yunjie Ji and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2505.02142},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.02142}, 
+}
+
 @misc{tian2025deepdistillenhancingllmreasoning,
       title={DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Yunjie Ji and Han Zhao and Xiangang Li},
