@@ -7,7 +7,7 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 ## 🔄 最近更新
 
 * [2025-05-05] 发布技术报告[Exploring the Potential of Offline RL for Reasoning in
-LLMs: A Preliminary Study](https://github.com/a-m-team/a-m-models/blob/main/docs/Exploring-the-Potential-of-Offline-RL-for-Reasoning-in-LLMs-A-Preliminary-Study.pdf)，探索了Offline-RL增强模型推理能力的方法，实验结果表明在各项评估指标有一致提升。
+LLMs: A Preliminary Study](https://arxiv.org/abs/2505.02142)，探索了Offline-RL增强模型推理能力的方法，实验结果表明在各项评估指标有一致提升。
 
 * [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
 
@@ -123,6 +123,16 @@ AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理�
 如果您觉得我们的工作对您的研究有所帮助，欢迎给我们点个星 :star:, 并引用我们的工作:pencil:
 
 ```BibTeX
+@misc{tian2025exploringpotentialofflinerl,
+      title={Exploring the Potential of Offline RL for Reasoning in LLMs: A Preliminary Study}, 
+      author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Yunjie Ji and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2505.02142},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.02142}, 
+}
+
 @misc{tian2025deepdistillenhancingllmreasoning,
       title={DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Yunjie Ji and Han Zhao and Xiangang Li},
