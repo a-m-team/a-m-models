@@ -2,9 +2,12 @@
 
 *Read this in [English](README_en.md).*
 
-a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言模型（LLMs）以及通用人工智能（AGI）的前沿技术进行深入探索与实践。我们的团队由一群充满热情的研究人员和开发者组成，聚焦于大模型的理论创新、架构设计以及实战应用，旨在逐步逼近通用人工智能（AGI）的实现。本项目旨在开源分享我们在大模型领域的最新研究成果与实践经验，希望能够推动社区对AGI技术的深度交流与共同进步。
+a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言模型（LLMs）以及通用人工智能（AGI）的前沿技术进行深入探索与实践。我们的团队由一群充满热情的研究人员和开发者组成，聚焦于大模型的理论创新、架构设计以及实战应用，旨在逐步逼近通用人工智能（AGI）的实现。本项目旨在开源分享我们在大模型领域的最新研究成果与实践经验，希望能够推动社区对AGI技术的深度交流与共同进步。 
 
 ## 🔄 最近更新
+
+* [2025-05-14] 发布技术报告[AM-Thinking-v1: Advancing the Frontier of
+Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)，结合监督微调与强化学习显著提升模型推理能力，在数学与编程任务上超越 DeepSeek-R1，逼近主流 MoE 模型效果，取得 Dense 32B 开源最优水平。
 
 * [2025-05-05] 发布技术报告[Exploring the Potential of Offline RL for Reasoning in
 LLMs: A Preliminary Study](https://arxiv.org/abs/2505.02142)，探索了Offline-RL增强模型推理能力的方法，实验结果表明在各项评估指标有一致提升。
@@ -21,6 +24,19 @@ Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning mo
 * [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
+
+### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
+
+当前大多数在推理能力上表现突出的开源语言模型多采用Mixture-of-Experts（MoE）架构，如 Qwen3-235B-A22B 和 Seed1.5-Thinking，尽管在性能上具备优势，但其部署和微调成本较高，不易应用于资源受限场景。相比之下，稠密结构的中等规模模型（如32B）在性能与实用性之间提供了更好的平衡，但相关工作仍相对较少。
+
+基于这一动机，我们构建了 **AM-Thinking-v1**. 该模型使用公开数据，通过有监督微调与强化学习相结合的后训练流程优化推理与代码能力。
+
+<img src="assets/am-thinking-v1-benchmark.png" alt="alt text" width="600px">
+
+实验结果显示，AM-Thinking-v1 在多个基准测试中表现优异：**AIME 2024 得分 85.3，AIME 2025 得分 74.4，LiveCodeBench 得分 70.3**，超过 DeepSeek-R1，并接近 MoE 架构的最强模型，是当前Dense 32B最优模型。结果表明，得益于精细的训练流程，32B 规模的开源稠密模型亦可在高难度推理任务中实现竞争性能。
+
+<img src="assets/am-thinking-v1-results_with_params.jpg" alt="alt text" width="600px">
+
 
 ### [Exploring the Potential of Offline RL for Reasoning inLLMs: A Preliminary Study](https://github.com/a-m-team/a-m-models/blob/main/docs/Exploring-the-Potential-of-Offline-RL-for-Reasoning-in-LLMs-A-Preliminary-Study.pdf)
 
@@ -123,6 +139,16 @@ AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理�
 如果您觉得我们的工作对您的研究有所帮助，欢迎给我们点个星 :star:, 并引用我们的工作:pencil:
 
 ```BibTeX
+@misc{ji2025amthinkingv1advancingfrontierreasoning,
+      title={AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale}, 
+      author={Yunjie Ji and Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2505.08311},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.08311}, 
+}
+
 @misc{tian2025exploringpotentialofflinerl,
       title={Exploring the Potential of Offline RL for Reasoning in LLMs: A Preliminary Study}, 
       author={Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Yunjie Ji and Han Zhao and Xiangang Li},
