@@ -15,7 +15,7 @@ LLMs: A Preliminary Study](https://arxiv.org/abs/2505.02142)，探索了Offline-
 * [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
 
 * [2025-04-13] 更新技术报告[Leveraging Reasoning Model Answers to Enhance Non-Reasoning
-Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning model提升non-reasoning model表现的方法。
+Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning model提升non-reasoning model表现的方法。
 
 * [2025-04-01] 更新技术报告 [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)，介绍了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力
 
