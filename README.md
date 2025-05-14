@@ -25,7 +25,7 @@ Model Capability](https://arxiv.org/pdf/2504.0963)，探索了使用reasoning mo
 
 ## 📑 研究报告
 
-### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
+### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)[![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
 
 当前大多数在推理能力上表现突出的开源语言模型多采用Mixture-of-Experts（MoE）架构，如 Qwen3-235B-A22B 和 Seed1.5-Thinking，尽管在性能上具备优势，但其部署和微调成本较高，不易应用于资源受限场景。相比之下，稠密结构的中等规模模型（如32B）在性能与实用性之间提供了更好的平衡，但相关工作仍相对较少。
 

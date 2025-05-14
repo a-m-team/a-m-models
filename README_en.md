@@ -24,7 +24,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，We explore and compare met
 
 ## 📑 Research Reports
 
-### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
+### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)[![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
 
 Most open-source language models that excel in reasoning tasks adopt a Mixture-of-Experts (MoE) architecture, such as Qwen3-235B-A22B and Seed1.5-Thinking. While these models offer strong performance, their deployment and fine-tuning costs are high, making them less suitable for resource-constrained environments. In contrast, medium-sized dense models (e.g., 32B) offer a better balance between performance and practicality, though such efforts remain relatively scarce.
 
