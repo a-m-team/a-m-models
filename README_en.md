@@ -6,6 +6,7 @@ a-m-models is an open-source initiative led by the a-m-team, dedicated to in-dep
 
 ## 🔄 Recent Updates
 
+* [2025-05-14] Published the technical report [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf), comparing the distillation effectiveness of three models: AM-Thinking-v1, Qwen3-235B-A22B, and DeepSeek-R1. The results show that distillation based on AM-Thinking-v1 yields the best performance. The analysis also reveals that output length can be adjusted according to question difficulty. Distillation datasets for AM-Thinking-v1 and Qwen3-235B-A22B have been open-sourced.
 
 * [2025-05-14] Released technical report [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311), which significantly improves reasoning capabilities by combining supervised fine-tuning with reinforcement learning. It surpasses DeepSeek-R1 in math and coding tasks and approaches the performance of mainstream MoE models, achieving state-of-the-art results among dense 32B open-source models.
 
@@ -23,6 +24,23 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，We explore and compare met
 * [2025-03-25] Updated the technical report [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf), introducing a simple yet effective test-time scaling approach—Multi-round Thinking—which further advances the state-of-the-art model performance
 
 ## 📑 Research Reports
+
+### [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf) [![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) [![Generic badge](https://img.shields.io/badge/🤗-AM_Qwen3_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Qwen3-Distilled)
+
+Three sets of reasoning data were distilled from AM-Thinking-v1, Qwen3-235B-A22B, and DeepSeek-R1. Experiments show that distillation based on AM-Thinking-v1 performs the best, with scores of **AIME2024: 84.3, AIME2025: 72.2, MATH500: 98.4, LiveCodeBench: 65.9**.
+
+<img src="assets/Not-All-Correct-Answers-Are-Equal-Why-Your-Distillation-Source-Matters.png" alt="alt text" width="600px">
+
+The results indicate that models trained via distillation from AM-Thinking-v1 produce shorter reasoning outputs on simpler tasks (e.g., MATH500) and longer outputs on more difficult tasks (e.g., AIME2024 & 2025, LiveCodeBench), compared to those distilled from Qwen3-235B-A22B. The distillation datasets for both AM-Thinking-v1 and Qwen3-235B-A22B have been open-sourced.
+
+#### Table: Average generation length (tokens per sample) across reasoning benchmarks
+
+| Benchmark        | AM-Thinking-v1<sub>Distilled</sub> | Qwen3-235B-A22B<sub>Distilled</sub> | DeepSeek-R1<sub>Distilled</sub> |
+|------------------|-------------------------------------|--------------------------------------|----------------------------------|
+| AIME2024         | 15,273.8                            | 13,516.4                              | 11,853.5                          |
+| AIME2025         | 18,199.2                            | 16,975.7                              | 13,495.9                          |
+| MATH500          | 3,495.7                             | 6,429.4                               | 3,613.0                           |
+| LiveCodeBench    | 23,426.9                            | 13,576.7                              | 30,731                            |
 
 ### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)[![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
 

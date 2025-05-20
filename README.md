@@ -6,6 +6,8 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
+* [2025-05-14] 发布技术报告[Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf)，对比AM-Thinking-v1、Qwen3-235B-A22B与DeepSeek-R1三个模型蒸馏效果，基于AM-Thinking-v1蒸馏训练效果最优，同时分析发现可以根据问题难度调整输出长度。AM-Thinking-v1与Qwen3-235B-A22B两份蒸馏数据已开源。
+
 * [2025-05-14] 发布技术报告[AM-Thinking-v1: Advancing the Frontier of
 Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)，结合监督微调与强化学习显著提升模型推理能力，在数学与编程任务上超越 DeepSeek-R1，逼近主流 MoE 模型效果，取得 Dense 32B 开源最优水平。
 
@@ -24,6 +26,25 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 * [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
+
+### [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf) [![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) [![Generic badge](https://img.shields.io/badge/🤗-AM_Qwen3_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Qwen3-Distilled)
+
+基于AM-Thinking-v1、Qwen3-235B-A22B以及DeepSeek-R1蒸馏了三份推理数据。实验发现基于AM-Thinking-v1蒸馏效果最优，其中**AIME2024 84.3，AIME 2025 72.2, MATH500 98.4, LiveCodeBench 65.9**.
+
+<img src="assets/Not-All-Correct-Answers-Are-Equal-Why-Your-Distillation-Source-Matters.png" alt="alt text" width="600px">
+
+实验发现基于AM-Thinking-v1蒸馏训练的模型，相较Qwen3-235B-A22B蒸馏训练的模型在较简单任务(如MATH500)推理长度更短，在较难任务(如AIME2024 & 2025、LiveCodeBench)推理输出更长。其中基于AM-Thinking-v1与Qwen3-235B-A22B蒸馏数据已开源。
+
+#### Table: Average generation length (tokens per sample) across reasoning benchmarks
+
+| Benchmark        | AM-Thinking-v1<sub>Distilled</sub> | Qwen3-235B-A22B<sub>Distilled</sub> | DeepSeek-R1<sub>Distilled</sub> |
+|------------------|-------------------------------------|--------------------------------------|----------------------------------|
+| AIME2024         | 15273.8                            | 13516.4                              | 11853.5                          |
+| AIME2025         | 18199.2                            | 16975.7                              | 13495.9                          |
+| MATH500          | 3495.7                             | 6429.4                               | 3613.0                           |
+| LiveCodeBench    | 23426.9                            | 13576.7                              | 30731                            |
+
+
 
 ### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)[![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
 
