@@ -160,6 +160,16 @@ AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理�
 如果您觉得我们的工作对您的研究有所帮助，欢迎给我们点个星 :star:, 并引用我们的工作:pencil:
 
 ```BibTeX
+@misc{tian2025correctanswersequaldistillation,
+      title={Not All Correct Answers Are Equal: Why Your Distillation Source Matters}, 
+      author={Xiaoyu Tian and Yunjie Ji and Haotian Wang and Shuaiting Chen and Sitong Zhao and Yiping Peng and Han Zhao and Xiangang Li},
+      year={2025},
+      eprint={2505.14464},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.14464}, 
+}
+
 @misc{ji2025amthinkingv1advancingfrontierreasoning,
       title={AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale}, 
       author={Yunjie Ji and Xiaoyu Tian and Sitong Zhao and Haotian Wang and Shuaiting Chen and Yiping Peng and Han Zhao and Xiangang Li},
