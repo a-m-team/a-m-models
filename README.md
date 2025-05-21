@@ -6,7 +6,7 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 
 ## 🔄 最近更新
 
-* [2025-05-20] 发布技术报告[Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf)，对比AM-Thinking-v1、Qwen3-235B-A22B与DeepSeek-R1三个模型蒸馏效果，基于AM-Thinking-v1蒸馏训练效果最优，同时分析发现可以根据问题难度调整输出长度。AM-Thinking-v1与Qwen3-235B-A22B两份蒸馏数据已开源。
+* [2025-05-20] 发布技术报告[Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://arxiv.org/abs/2505.14464)，对比AM-Thinking-v1、Qwen3-235B-A22B与DeepSeek-R1三个模型蒸馏效果，基于AM-Thinking-v1蒸馏训练效果最优，同时分析发现可以根据问题难度调整输出长度。AM-Thinking-v1与Qwen3-235B-A22B两份蒸馏数据已开源。
 
 * [2025-05-14] 发布技术报告[AM-Thinking-v1: Advancing the Frontier of
 Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)，结合监督微调与强化学习显著提升模型推理能力，在数学与编程任务上超越 DeepSeek-R1，逼近主流 MoE 模型效果，取得 Dense 32B 开源最优水平。
@@ -27,7 +27,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 
 ## 📑 研究报告
 
-### [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf) [![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) [![Generic badge](https://img.shields.io/badge/🤗-AM_Qwen3_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Qwen3-Distilled)
+### [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://arxiv.org/abs/2505.14464) [![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) [![Generic badge](https://img.shields.io/badge/🤗-AM_Qwen3_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Qwen3-Distilled)
 
 基于AM-Thinking-v1、Qwen3-235B-A22B以及DeepSeek-R1蒸馏了三份推理数据。实验发现基于AM-Thinking-v1蒸馏效果最优，其中**AIME2024 84.3，AIME 2025 72.2, MATH500 98.4, LiveCodeBench 65.9**.
 

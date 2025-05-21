@@ -6,7 +6,7 @@ a-m-models is an open-source initiative led by the a-m-team, dedicated to in-dep
 
 ## 🔄 Recent Updates
 
-* [2025-05-20] Published the technical report [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf), comparing the distillation effectiveness of three models: AM-Thinking-v1, Qwen3-235B-A22B, and DeepSeek-R1. The results show that distillation based on AM-Thinking-v1 yields the best performance. The analysis also reveals that output length can be adjusted according to question difficulty. Distillation datasets for AM-Thinking-v1 and Qwen3-235B-A22B have been open-sourced.
+* [2025-05-20] Published the technical report [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://arxiv.org/abs/2505.14464), comparing the distillation effectiveness of three models: AM-Thinking-v1, Qwen3-235B-A22B, and DeepSeek-R1. The results show that distillation based on AM-Thinking-v1 yields the best performance. The analysis also reveals that output length can be adjusted according to question difficulty. Distillation datasets for AM-Thinking-v1 and Qwen3-235B-A22B have been open-sourced.
 
 * [2025-05-14] Released technical report [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311), which significantly improves reasoning capabilities by combining supervised fine-tuning with reinforcement learning. It surpasses DeepSeek-R1 in math and coding tasks and approaches the performance of mainstream MoE models, achieving state-of-the-art results among dense 32B open-source models.
 
@@ -25,7 +25,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，We explore and compare met
 
 ## 📑 Research Reports
 
-### [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://github.com/a-m-team/a-m-models/blob/main/docs/Not%20All%20Correct%20Answers%20Are%20Equal-%20Why%20Your%20Distillation%20Source%20Matters.pdf) [![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) [![Generic badge](https://img.shields.io/badge/🤗-AM_Qwen3_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Qwen3-Distilled)
+### [Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://arxiv.org/abs/2505.14464) [![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Thinking-v1-Distilled) [![Generic badge](https://img.shields.io/badge/🤗-AM_Qwen3_distilled-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Qwen3-Distilled)
 
 Three sets of reasoning data were distilled from AM-Thinking-v1, Qwen3-235B-A22B, and DeepSeek-R1. Experiments show that distillation based on AM-Thinking-v1 performs the best, with scores of **AIME2024: 84.3, AIME2025: 72.2, MATH500: 98.4, LiveCodeBench: 65.9**.
 
