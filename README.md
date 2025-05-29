@@ -9,7 +9,7 @@ a-m-models 是由 a-m-teams 发起的一个开源项目，致力于对大语言�
 * [2025-05-20] 发布技术报告[Not All Correct Answers Are Equal: Why Your Distillation Source Matters](https://arxiv.org/abs/2505.14464)，对比AM-Thinking-v1、Qwen3-235B-A22B与DeepSeek-R1三个模型蒸馏效果，基于AM-Thinking-v1蒸馏训练效果最优，同时分析发现可以根据问题难度调整输出长度。AM-Thinking-v1与Qwen3-235B-A22B两份蒸馏数据已开源。
 
 * [2025-05-14] 发布技术报告[AM-Thinking-v1: Advancing the Frontier of
-Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)，结合监督微调与强化学习显著提升模型推理能力，在数学与编程任务上超越 DeepSeek-R1，逼近主流 MoE 模型效果，取得 Dense 32B 开源最优水平。
+Reasoning at 32B Scale](https://arxiv.org/abs/2505.08311)，结合监督微调与强化学习显著提升模型推理能力，在数学与编程任务上超越 DeepSeek-R1，逼近主流 MoE 模型效果，取得 Dense 32B 开源最优水平。
 
 * [2025-05-05] 发布技术报告[Exploring the Potential of Offline RL for Reasoning in
 LLMs: A Preliminary Study](https://arxiv.org/abs/2505.02142)，探索了Offline-RL增强模型推理能力的方法，实验结果表明在各项评估指标有一致提升。
@@ -17,13 +17,13 @@ LLMs: A Preliminary Study](https://arxiv.org/abs/2505.02142)，探索了Offline-
 * [2025-04-24] 发布技术报告[DeepDistill: Enhancing LLM Reasoning Capabilities via Large-Scale Difficulty-Graded Data Training](https://arxiv.org/abs/2504.17565)，开源了约4000万条不同能力模型的蒸馏数据集，显著提升基础模型推理能力。
 
 * [2025-04-13] 更新技术报告[Leveraging Reasoning Model Answers to Enhance Non-Reasoning
-Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning model提升non-reasoning model表现的方法。
+Model Capability](https://arxiv.org/abs/2504.09639)，探索了使用reasoning model提升non-reasoning model表现的方法。
 
-* [2025-04-01] 更新技术报告 [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)，介绍了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力
+* [2025-04-01] 更新技术报告 [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://arxiv.org/abs/2504.00829)，介绍了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力
 
-* [2025-03-25] 更新技术报告[1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf)，开源140万条蒸馏推理数据，复现DeepSeek-R1蒸馏模型效果
+* [2025-03-25] 更新技术报告[1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://arxiv.org/abs/2503.19633)，开源140万条蒸馏推理数据，复现DeepSeek-R1蒸馏模型效果
 
-* [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
+* [2025-03-25] 更新技术报告[Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://arxiv.org/abs/2503.19855)，介绍了一种简单且有效的测试阶段扩展方法——多轮思考，其推动了SOTA模型效果的进一步提升
 
 ## 📑 研究报告
 
@@ -46,7 +46,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 
 
 
-### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/pdf/2505.08311)[![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
+### [AM-Thinking-v1: Advancing the Frontier of Reasoning at 32B Scale](https://arxiv.org/abs/2505.08311)[![Generic badge](https://img.shields.io/badge/🤗-AM_thinking_v1-green.svg)](https://huggingface.co/a-m-team/AM-Thinking-v1)
 
 当前大多数在推理能力上表现突出的开源语言模型多采用Mixture-of-Experts（MoE）架构，如 Qwen3-235B-A22B 和 Seed1.5-Thinking，尽管在性能上具备优势，但其部署和微调成本较高，不易应用于资源受限场景。相比之下，稠密结构的中等规模模型（如32B）在性能与实用性之间提供了更好的平衡，但相关工作仍相对较少。
 
@@ -59,7 +59,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 <img src="assets/am-thinking-v1-results_with_params.jpg" alt="alt text" width="600px">
 
 
-### [Exploring the Potential of Offline RL for Reasoning inLLMs: A Preliminary Study](https://github.com/a-m-team/a-m-models/blob/main/docs/Exploring-the-Potential-of-Offline-RL-for-Reasoning-in-LLMs-A-Preliminary-Study.pdf)
+### [Exploring the Potential of Offline RL for Reasoning inLLMs: A Preliminary Study](https://arxiv.org/abs/2505.02142)
 
 随着大语言模型（LLMs）在长上下文推理任务中的表现持续提升，当前的主流方法主要依赖在线强化学习（Online RL），然而这些方法通常伴随较高的计算成本和复杂性。相较而言，离线强化学习（Offline RL）方法因其简洁高效而展现出潜在的优势，但在长上下文推理领域却未获得充分探索。
 
@@ -79,7 +79,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 <img src="assets/DeepDistill.png" alt="alt text" width="600px">
 
 
-### [Leveraging Reasoning Model Answers to Enhance Non-Reasoning Model Capability](https://arxiv.org/pdf/2504.09639)
+### [Leveraging Reasoning Model Answers to Enhance Non-Reasoning Model Capability](https://arxiv.org/abs/2504.09639)
 
 近期大型语言模型（LLMs）的进展，例如 DeepSeek-R1 和 OpenAI-o1，已展示了test time scaling的显著有效性，在各种基准测试中取得了实质性的性能提升。这些先进模型利用审慎的"思考"步骤系统地提高答案质量。在本文中，我们提出利用这些由reasoning model生成的高质量输出，来改进计算需求较低、非推理的模型。我们探索并比较了利用推理模型产生的答案来训练和改进非推理模型的方法。通过在既定基准上进行监督微调（SFT）实验，我们在各种基准上取得了持续的改进，强调了这种方法在提升non-reasoning model直接回答问题的能力方面的潜力。
 
@@ -93,7 +93,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 <img src="assets/Leveraging-Reasoning-Model-Answers-to-Enhance-Non-Reasoning-Model-Capability.png" alt="alt text" width="600px">
 
 
-### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://github.com/a-m-team/a-m-models/blob/main/docs/How-Difficulty-Aware-Staged-Reinforcement-Learning-Enhances-LLMs-Reasoning-Capabilities-A-Preliminary-Experimental-Study.pdf)[![Generic badge](https://img.shields.io/badge/🤗-AM_Math_Difficulty_RL-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Math-Difficulty-RL)
+### [How Difficulty-Aware Staged Reinforcement Learning Enhances LLMs' Reasoning Capabilities: A Preliminary Experimental Study](https://arxiv.org/abs/2504.00829)[![Generic badge](https://img.shields.io/badge/🤗-AM_Math_Difficulty_RL-green.svg)](https://huggingface.co/datasets/a-m-team/AM-Math-Difficulty-RL)
 
 提高大语言模型（LLMs）推理能力的效率和规模是人工智能研究中的一个关键挑战。本文研究了难度感知分阶段强化学习（RL）策略如何提升LLM性能。我们表明，基于难度等级选择训练数据有助于强化学习优化。此外，我们提出了一种分阶段训练方法，逐步让模型接触更具挑战性的任务，从而提高其推理能力。我们的结果还强调了在数学推理和代码生成任务上训练模型的显著好处。
 
@@ -115,7 +115,7 @@ Model Capability](https://arxiv.org/pdf/2504.09639)，探索了使用reasoning m
 
 <img src="assets/staged-RL-math-code.png" alt="alt text" width="600px">
 
-### [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://github.com/a-m-team/a-m-models/blob/main/docs/Think-Twice.pdf)
+### [Think Twice: Enhancing LLM Reasoning by Scaling Multi-round Test-time Thinking](https://arxiv.org/abs/2503.19855)
 
 近年来，以OpenAI-o1和DeepSeek-R1为代表的大语言模型（LLMs）取得了显著进展，这些进展表明，通过测试阶段扩展推理流程（test-time scaling），可显著提升模型表现。然而，目前的模型仍受到处理长文本能力和强化学习（RL）训练效率的限制。为解决这些问题，我们提出了一种简单且有效的测试阶段扩展方法——多轮思考（Multi-round Thinking）。该方法通过将模型先前的回答作为下一轮推理的提示（prompts），迭代地精进模型的推理过程。在包括QwQ-32B和DeepSeek-R1在内的多个模型上的大量实验表明，多轮思考能够在AIME 2024、MATH-500、GPQA-diamond和LiveCodeBench等多个基准测试中稳定提升模型表现。例如，在AIME 2024数据集中，QwQ-32B的准确率从第一轮的80.3%提高到第二轮的82.1%，DeepSeek-R1也表现出了类似的提升，从79.7%提高到82.0%。这些结果证明，多轮思考是一种适用广泛、实施简单且有效提升模型表现的方法，彰显出该方法在未来测试阶段扩展技术发展中的巨大潜力。
 
@@ -149,7 +149,7 @@ The assistant’s previous answer is: <answer> last round answer </answer>, and 
 ---
 ---
 
-### [1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://github.com/a-m-team/a-m-models/blob/main/docs/AM-DeepSeek-R1-Distilled-Dataset.pdf) [![Generic badge](https://img.shields.io/badge/🤗-1.4M-green.svg)](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M)
+### [1.4 Million Open-Source Distilled Reasoning Dataset to Empower Large Language Model Traning](https://arxiv.org/abs/2503.19633) [![Generic badge](https://img.shields.io/badge/🤗-1.4M-green.svg)](https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M)
 
 AM-DeepSeek-R1-Distilled 是一个大规模、带有推理过程的通用推理任务数据集，包含大量高质量且具备挑战性的推理问题。这些问题收集自多个开源数据集，经过语义去重和精细清理，以消除可能的测试集污染风险。数据集中所有的答案均由推理模型（主要为 DeepSeek-R1）蒸馏而成，并经过严格的验证流程：数学问题通过与标准答案对比进行验证，代码问题通过测试用例进行核验，而其他类型任务则通过奖励模型进行评估。基于该数据集仅使用简单监督微调（SFT）训练的 AM-Distill-Qwen-32B 模型，在 AIME2024、MATH-500、GPQA-Diamond 以及 LiveCodeBench 四项基准测试上，均超越了DeepSeek-R1-Distill-Qwen-32B 模型。为了推动更强大的推理导向大语言模型（LLMs）发展，我们开源了这140万条问题及其对应的答案。该数据集已公开在 <https://huggingface.co/datasets/a-m-team/AM-DeepSeek-R1-Distilled-1.4M。>
 
